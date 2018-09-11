@@ -46,6 +46,6 @@ function displayBranches() {
 function displayCommits() {
   var commits = JSON.parse(this.responseText)
   let commitsList = '<ul></ul>'
-  commitsList += commits.map(commit => `<li>${commit.commit.committer.name} - ${commit.commit.message}`)
+  commitsList += commits.map(commit => `<li>${commit.commit.committer.name} - ${commit.commit.message} - ${commit.author.login}`)
   document.getElementById("details").innerHTML = commitsList
 }
