@@ -15,7 +15,7 @@ function displayRepositories() {
       <a href="${repo.html_url}">${repo.name}</a> -
       <a href="#" data-repoOwner="${repo.owner.login}" data-repoName="${repo.name}" onclick="getCommits(this)">
       Get Commits</a>
-      <a href="##" onclick="getBranches(${repo.owner.login}, ${repo.name})">
+      <a href="##" data-repoOwner="${repo.owner.login}" data-repoName="${repo.name}" onclick="getBranches(this)">
       Get Branches</a>
     </li>`
   ).join()
