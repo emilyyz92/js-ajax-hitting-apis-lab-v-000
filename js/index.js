@@ -25,7 +25,7 @@ function displayRepositories() {
 function getCommits(owner, repoName) {
   var commitReq = new XMLHttpRequest()
   commitReq.addEventListener('load', displayCommits)
-  commitReq.open('GET', `https://api.github.com/${owner}/${repoName}/commits`)
+  commitReq.open('GET', `https://api.github.com/repos/${owner}/${repoName}/commits`)
   commitReq.send()
 }
 
