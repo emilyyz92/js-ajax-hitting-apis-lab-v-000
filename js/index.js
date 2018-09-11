@@ -29,7 +29,7 @@ function getCommits(el) {
   commitReq.send()
 }
 
-function getBranches(owner, repo) {
+function getBranches(el) {
   var req = new XMLHttpRequest()
   req.addEventListener('load', displayBranches)
   req.open('GET' `https://api.github.com/repos/${owner}/${repoName}/branches`)
