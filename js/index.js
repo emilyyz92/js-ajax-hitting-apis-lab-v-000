@@ -12,6 +12,6 @@ function displayRepositories() {
   let repoList = '<ul></ul>'
   repoList += repos.map(repo =>
     `<li> <a href="${repo.html_url}">${repo.name}</a></li>`
-  )
+  ).join()
   document.getElementById("repositories").innerHTML = repoList
 }
