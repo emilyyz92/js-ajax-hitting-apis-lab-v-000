@@ -15,3 +15,7 @@ function displayRepositories() {
   ).join()
   document.getElementById("repositories").innerHTML = repoList
 }
+
+function getCommits() {
+
+}
