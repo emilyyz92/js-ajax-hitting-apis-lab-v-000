@@ -19,9 +19,6 @@ function displayRepositories() {
       Get Branches</a>
     </li>`
   ).join()
-  repos.forEach(function(repo) {
-    console.log(repo.owner.login, repo.name)
-  })
   document.getElementById("repositories").innerHTML = repoList
 }
 
