@@ -37,5 +37,5 @@ function getBranches(el) {
 }
 
 function displayBranches() {
-
+  var branches = JSON.parse(this.responseText)
 }
