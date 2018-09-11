@@ -13,7 +13,7 @@ function displayRepositories() {
   repoList += repos.map(repo =>
     `<li>
       <a href="${repo.html_url}">${repo.name}</a> -
-      <a href="#" onclick="getCommits(${repo.owner.login}, ${repo.name})">
+      <a href="#" data-repoOwner="${repo.owner.login}"onclick="getCommits(this)">
       Get Commits</a>
       <a href="##" onclick="getBranches(${repo.owner.login}, ${repo.name})">
       Get Branches</a>
