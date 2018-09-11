@@ -22,7 +22,7 @@ function displayRepositories() {
   document.getElementById("repositories").innerHTML = repoList
 }
 
-function getCommits(owner, repoName) {
+function getCommits(el) {
   var commitReq = new XMLHttpRequest()
   commitReq.addEventListener('load', displayCommits)
   commitReq.open('GET', `https://api.github.com/repos/${owner}/${repoName}/commits`)
