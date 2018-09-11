@@ -25,7 +25,7 @@ function displayRepositories() {
 function getCommits(el) {
   var commitReq = new XMLHttpRequest()
   commitReq.addEventListener('load', displayCommits)
-  commitReq.open('GET', `https://api.github.com/repos/${el.dataset.repoOwner}/${repoName}/commits`)
+  commitReq.open('GET', `https://api.github.com/repos/${el.dataset.repoOwner}/${el.dataset.repoName}/commits`)
   commitReq.send()
 }
 
