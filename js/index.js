@@ -10,7 +10,7 @@ function getRepositories() {
 function displayRepositories() {
   var repos = JSON.parse(this.responseText)
   let repoList = '<ul></ul>'
-  repoList += repos.forEach(repo =>
+  repoList += repos.map(repo =>
     `<li> <a href="${repo.html_url}">${repo.name}</a></li>`
   )
   document.getElementById("repositories").innerHTML = repoList
