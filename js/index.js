@@ -42,3 +42,7 @@ function displayBranches() {
   branchList += branches.map(branch => `<li>${branch.name}</li>`)
   document.getElementById('details').innerHTML = branchList
 }
+
+function displayCommits() {
+
+}
