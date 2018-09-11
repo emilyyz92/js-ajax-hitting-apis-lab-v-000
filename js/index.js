@@ -19,6 +19,7 @@ function displayRepositories() {
       Get Branches</a>
     </li>`
   ).join()
+  debugger;
   document.getElementById("repositories").innerHTML = repoList
 }
 
