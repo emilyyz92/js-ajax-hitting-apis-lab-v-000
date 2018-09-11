@@ -11,7 +11,7 @@ function displayRepositories() {
   var repos = JSON.parse(this.responseText)
   debugger;
   const repoList = `<ul>` + repos.forEach(function(element) {
-    return `<li> <a href=`${element.html_url}`>${element.name}</a></li>`
+    return `<li> <a href="${element.html_url}">${element.name}</a></li>`
   }) + `</ul>`
   document.getElementById("repositories").innerHTML = repoList
 }
