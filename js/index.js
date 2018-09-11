@@ -11,7 +11,7 @@ function displayRepositories() {
   var repos = JSON.parse(this.responseText)
   let repoList = '<ul></ul>'
   repoList += repos.map(repo =>
-    `<li> <a href="${repo.html_url}">${repo.name}</a> 
+    `<li> <a href="${repo.html_url}">${repo.name}</a>
     - <a href="#" onclick="getCommits(${repo.owner.login}, ${repo.name})">
     Get Commits</a></li>`
   ).join()
@@ -19,5 +19,8 @@ function displayRepositories() {
 }
 
 function getCommits(owner, repoName) {
-
+  var commitReq = new XMLHttpRequest()
+  commitReq.addEventListener('load', displayCommits)
+  commitReq.open('GET', `https://api.github.com/${owner}/${repoName}/commits`)
+  commitReq.send()
 }
