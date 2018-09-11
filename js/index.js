@@ -12,7 +12,7 @@ function displayRepositories() {
   let repoList = '<ul></ul>'
   repoList += repos.map(repo =>
     `<li>
-      <a href="${repo.html_url}">${repo.name}</a> - 
+      <a href="${repo.html_url}">${repo.name}</a> -
       <a href="#" onclick="getCommits(${repo.owner.login}, ${repo.name})">
       Get Commits</a>
       <a href="##" onclick="getBranches(${repo.owner.login}, ${repo.name})">
@@ -32,9 +32,9 @@ function getCommits(owner, repoName) {
 function getBranches(owner, repo) {
   var req = new XMLHttpRequest()
   req.addEventListener('load', displayBranches)
-  req.open('GET')
+  req.open('GET' `https://api.github.com/repos/${owner}/${repoName}/branches`)
 }
 
 function displayBranches() {
-  
+
 }
