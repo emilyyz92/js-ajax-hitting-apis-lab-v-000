@@ -38,4 +38,7 @@ function getBranches(el) {
 
 function displayBranches() {
   var branches = JSON.parse(this.responseText)
+  let branchList = '<ul></ul>'
+  branchList += branches.map(branch => `<li>${branch.name}</li>`)
+  document.getElementById('details').innerHTML = branchList
 }
