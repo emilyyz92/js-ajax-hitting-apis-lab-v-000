@@ -32,7 +32,7 @@ function getCommits(el) {
 function getBranches(el) {
   var req = new XMLHttpRequest()
   req.addEventListener('load', displayBranches)
-  req.open('GET' `https://api.github.com/repos/${el.dataset.repoOwner}/${el.dataset.repoName}/branches`)
+  req.open('GET', `https://api.github.com/repos/${el.dataset.repoOwner}/${el.dataset.repoName}/branches`)
   req.send()
 }
 
