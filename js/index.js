@@ -13,9 +13,9 @@ function displayRepositories() {
   repoList += repos.map(repo =>
     `<li>
       <a href="${repo.html_url}">${repo.name}</a> -
-      <a href="#" data-repoOwner=${repo.owner.login} data-repoName=${repo.name} onclick="getCommits(this)">
+      <a href="#" data-owner=${repo.owner.login} data-name=${repo.name} onclick="getCommits(this)">
       Get Commits</a>
-      <a href="##" data-repoOwner=${repo.owner.login} data-repoName=${repo.name} onclick="getBranches(this)">
+      <a href="##" data-owner=${repo.owner.login} data-name=${repo.name} onclick="getBranches(this)">
       Get Branches</a>
     </li>`
   ).join()
